@@ -14,10 +14,10 @@ const RouteData = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="about" element={<About />} />
-          <Route path="resume" element={<Resume />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resume" element={<Resume />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>``
       </BrowserRouter>
     </div>
