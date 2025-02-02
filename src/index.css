@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-poppins: "Poppins", "sans-serif";
+  --font-dealoras: "Dealoras", "sans-serif";
+  --font-askilon: "Askilon", "Poppins";
+}
+
+@font-face {
+  font-family: 'Dealoras';
+  src: url('./assets/Fonts/Dealoras.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Askilon';
+  src: url('./assets/Fonts/Askilon.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+} 
