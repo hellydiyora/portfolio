@@ -10,15 +10,15 @@ import Projects from "./Components/Projects";
 const RouteData = () => {
   return (
     <div className="h-lvh w-full bg-[#E1D7B7] dark:bg-slate-900 ">
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/projects" element={<Projects />} />
-        </Routes>
+          <Route path="about" element={<About />} />
+          <Route path="resume" element={<Resume />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="projects" element={<Projects />} />
+        </Routes>``
       </BrowserRouter>
     </div>
   );
