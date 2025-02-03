@@ -6,8 +6,19 @@
   --font-poppins: "Poppins", "sans-serif";
   --font-dealoras: "Dealoras", "sans-serif";
   --font-askilon: "Askilon", "Poppins";
+  
+ 
 }
 
+@theme {
+  --breakpoint-xs: 10rem;
+  --breakpoint-sm: 30rem; /*640px */
+  --breakpoint-md: 50rem; /* 800px */
+  --breakpoint-cust: 58rem; /* 928px */
+  --breakpoint-lg: 64rem; /* 1024px */
+  --breakpoint-2xl: 80rem; /* 1280px */
+  --breakpoint-3xl: 96rem; /* 1536px */ 
+}
 @font-face {
   font-family: 'Dealoras';
   src: url('./assets/Fonts/Dealoras.ttf') format('truetype');

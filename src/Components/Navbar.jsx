@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { useTheme } from "../Context/ThemeProvider";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import { social } from "../data";
 
 const Navbar = () => {
   const { theme, onChange } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +32,14 @@ const Navbar = () => {
     }
   }, [theme]);
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div
       style={{
@@ -37,23 +48,22 @@ const Navbar = () => {
             ? "0 4px 6px rgba(115, 115, 115, 0.15)"
             : "0 4px 6px rgba(229, 229, 229, 0.15)",
       }}
-      className={`font-askilon fixed top-0 left-0 w-full z-50 drop-shadow-lg transition-all duration-300 flex justify-between items-center py-4 px-14 ${
+      className={`font-poppins bg-[#183D3D] dark:bg-slate-950 text-[#F6E6CB] dark:text-white grid grid-cols-[80%_10%_10%] md:grid-cols-[30%_55%_10%_5%] items-center py-3 px-6 fixed top-0 left-0 z-50 drop-shadow-lg transition-all duration-300 w-full ${
         isScrolled
           ? "bg-transparent backdrop-blur-lg bg-opacity-70 text-[#F6E6CB]"
           : "bg-[#183D3D] dark:bg-slate-950"
       }`}
     >
-      <Link to="/">
-        <h1
-          className={`text-5xl font-bold dark:text-white hover:opacity-70 transition ${
+      <Link to="/" className="">
+        <p
+          className={`text-5xl  font-bold dark:text-white  transition  ${
             isScrolled ? "text-black" : "text-[#F6E6CB]"
           }`}
         >
-          HD
-        </h1>
+          <span className="hover:opacity-70">HD </span>
+        </p>
       </Link>
-
-      <ul className="flex space-x-12 text-2xl justify-center font-light">
+      <ul className="text-xl font-serif hidden md:grid grid-cols-[25%_25%_25%_25%] text-black justify-items-start">
         {["about", "resume", "projects", "contact"].map((item, index) => (
           <li key={index} className="relative group">
             <Link
@@ -70,16 +80,15 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
-      <ul
-        className={`flex gap-4 justify-center space-x-6 ${
+      <div
+        className={` hidden md:grid grid-cols-2 gap-1  justify-items-end ${
           isScrolled
             ? "text-black"
             : "text-[#F6E6CB] dark:text-white cursor-pointer"
-        }`}
+        } `}
       >
         {social.map((item, index) => {
-          const IconComponent = item.tag; // Retrieve component reference
+          const IconComponent = item.tag;
           return (
             <a
               key={index}
@@ -87,16 +96,75 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={item.name}
-              className="dark:text-white  transition hover:opacity-50"
+              className="dark:text-white transition hover:opacity-50"
             >
               <IconComponent fontSize="large" />
             </a>
           );
         })}
-        <div onClick={onChange} className="cursor-pointer dark:text-white">
-          {theme === "light" ? <DarkModeIcon fontSize="large" /> : <LightModeIcon fontSize="large" />}
+      </div>
+      <div
+        onClick={toggleMenu}
+        className={`visible md:hidden justify-self-end dark:text-white cursor-pointer ${
+          isScrolled
+            ? "text-black"
+            : "text-[#F6E6CB] dark:text-white cursor-pointer"
+        }`}
+      >
+        {isMenuOpen ? (
+          <CloseIcon fontSize="large" />
+        ) : (
+          <MenuIcon fontSize="large" />
+        )}
+      </div>
+      <div
+        onClick={onChange}
+        className={`cursor-pointer justify-self-start md:justify-self-end dark:text-white ${
+          isScrolled
+            ? "text-black"
+            : "text-[#F6E6CB] dark:text-white"
+        } `}
+      >
+        {theme === "light" ? (
+          <DarkModeIcon fontSize="large" />
+        ) : (
+          <LightModeIcon fontSize="large" />
+        )}
+      </div>
+      {isMenuOpen && (
+        <div className="md:hidden fixed top-16 left-0 w-full bg-[#183D3D] dark:bg-slate-900 text-white py-6 shadow-xl rounded-b-xl transition-all duration-500 ease-in-out">
+          <ul className="flex flex-col items-center gap-6">
+            {["about", "resume", "projects", "contact"].map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={`/${item}`}
+                  onClick={closeMenu}
+                  className="text-xl capitalize hover:opacity-70 transition"
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex justify-center gap-4 mt-4">
+            {social.map((item, index) => {
+              const IconComponent = item.tag;
+              return (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                  className="transition hover:opacity-70"
+                >
+                  <IconComponent fontSize="large" />
+                </a>
+              );
+            })}
+          </div>
         </div>
-      </ul>
+      )}
     </div>
   );
 };

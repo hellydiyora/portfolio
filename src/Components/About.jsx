@@ -56,44 +56,46 @@ const About = () => {
 
   return (
     <div className="bg-[#E1D7B7] dark:bg-slate-900 pt-20">
-      <div className="flex justify-between font-askilon">
-        <div className="w-3/4 p-16">
+      <div className="grid grid-cols-1 lg:grid-cols-[75%_25%]  font-askilon">
+        <div className=" p-10 md:p-16 ">
           <h1 className="text-6xl text-[#4B5945] dark:text-[#D7D3BF] font-extrabold ">
             About
           </h1>
           <p className="text-3xl font-semibold text-[#133122] dark:text-white py-5">
             {intro}
           </p>
-          <p className="text-2xl text-[#05170e]  dark:text-[#D9DFC6] font-askilon font-light">
+          <p className="text-xl text-[#183D3D]  dark:text-neutral-500 font-serif font-light">
             {description}
           </p>
           <div>
-            <div className="p-10">
-              <ul className="flex gap-2">
-                <div className="flex flex-col justify-between gap-7 ">
-                  <li className="text-2xl font-medium text-[#133122] dark:text-gray-200">
-                    Degree:{" "}
-                    <span className="text-xl text-black dark:text-[#D9DFC6] font-light">
+            <div className="px-2 py-10 lg:p-10">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 font-serif">
+                <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-2 ">
+                  <li>
+                    <span className="text-xl font-medium  text-[#0c2217] dark:text-gray-200">
+                      Degree:{" "}
+                    </span>
+                    <span className="text-lg text-[#183D3D] dark:text-neutral-400 font-light">
                       {degree}
                     </span>
                   </li>
-                  <li className="text-2xl font-medium text-[#133122] dark:text-gray-200">
+                  <li className="text-xl font-medium text-[#0c2217] dark:text-gray-200">
                     Degree Status:{" "}
-                    <span className="text-xl text-black font-light dark:text-[#D9DFC6]">
+                    <span className="text-lg text-[#183D3D] font-light dark:text-neutral-400">
                       {degreeStatus}
                     </span>
                   </li>
                 </div>
-                <div className="flex flex-col justify-between items-end gap-7">
-                  <li className="text-2xl font-medium text-[#133122] dark:text-gray-200">
+                <div className="grid grid-rows-1 md:grid-rows-2 gap-4 md:gap-2">
+                  <li className="text-xl font-medium text-[#0c2217] dark:text-gray-200">
                     Employment status:{" "}
-                    <span className="text-xl text-black font-light dark:text-[#D9DFC6]">
+                    <span className="text-lg text-[#183D3D] font-light dark:text-neutral-400">
                       {employment}
                     </span>
                   </li>
-                  <li className="text-2xl font-medium text-[#133122] dark:text-gray-200">
+                  <li className="text-xl font-medium text-[#0c2217] dark:text-gray-200">
                     University:{" "}
-                    <span className="text-xl text-black font-light dark:text-[#D9DFC6]">
+                    <span className="text-lg text-[#183D3D] font-light dark:text-neutral-400">
                       {university}
                     </span>
                   </li>
@@ -102,20 +104,20 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/4 pt-16 pr-4">
+        <div className="pt-0 mb-10 lg:mb-0 lg:pt-16">
           <img
             src={profile}
-            className="h-[400px] w-[350px] mx-auto shadow-lg shadow-neutral-800 dark:shadow-neutral-600 rounded-lg"
+            className="h-[400px] w-[330px] lg:w-[350px] mx-auto shadow-md shadow-neutral-800 dark:shadow-neutral-600 rounded-lg"
             alt="profile"
           />
         </div>
       </div>
 
-      <div className="pt-2 px-20 pb-16 font-askilon" ref={skillsRef}>
+      <div className="pt-2 px-10 lg:px-20 pb-16 font-askilon" ref={skillsRef}>
         <h1 className="text-6xl text-[#4B5945] dark:text-[#D7D3BF] font-bold text-center mb-10">
           Skills
         </h1>
-        <div className="grid grid-cols-2 gap-10 font-semibold">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 font-semibold">
           {skills.map((skill, index) => (
             <div
               key={index}
