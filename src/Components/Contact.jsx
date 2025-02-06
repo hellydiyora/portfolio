@@ -55,7 +55,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#ECEBDE] dark:bg-slate-900  pt-20 relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center font-askilon">
+    <div className="bg-[#FAF7F0] dark:bg-slate-900  pt-32 relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center font-askilon">
       {alertMessage && (
         <div className="absolute top-16 left-10  z-70 bg-white border-1 text-black  p-3 rounded-lg shadow-md text-lg uppercase">
           {alertMessage}

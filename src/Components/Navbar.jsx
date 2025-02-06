@@ -55,7 +55,7 @@ const Navbar = () => {
       }`}
     >
       <Link to="/" className="">
-        <p className="text-5xl  font-bold dark:text-white  transition text-[#3C2A21]">
+        <p className="text-5xl font-askilon pt-3  font-bold dark:text-white  transition text-[#3C2A21]">
           <span className="hover:opacity-70">HD </span>
         </p>
       </Link>
@@ -114,18 +114,19 @@ const Navbar = () => {
         <div className="md:hidden fixed top-16 left-0 w-full bg-[#A59D84] dark:bg-slate-900 text-[#3C2A21] py-6 shadow-xl rounded-b-xl transition-all duration-500 ease-in-out">
           <ul className="flex flex-col items-center gap-6">
             {["about", "resume", "projects", "contact"].map((item, index) => (
-              <li key={index}>
+              <li key={index} className=" hover:opacity-60 transition">
                 <Link
                   to={`/${item}`}
                   onClick={closeMenu}
-                  className="text-xl capitalize hover:opacity-70 transition"
+                  className="text-xl capitalize  "
                 >
                   {item}
                 </Link>
-                <hr />
+                <hr className="text-[#3C2A21]"/>
               </li>
               
             ))}
+          
           </ul>
           <div className="flex justify-center gap-4 mt-4">
             {social.map((item, index) => {

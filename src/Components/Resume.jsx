@@ -2,7 +2,7 @@ import React from 'react'
 
 const Resume = () => {
   return (
-    <div className="bg-[#ECEBDE] dark:bg-slate-900 pt-20 h-lvh">
+    <div className="bg-[#FAF7F0] dark:bg-slate-900 pt-20 h-lvh">
       <div>
         <h1>Education</h1>
       </div>

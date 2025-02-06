@@ -55,7 +55,7 @@ const About = () => {
   };
 
   return (
-    <div className="bg-[#ECEBDE] dark:bg-slate-900  pt-20">
+    <div className="bg-[#FAF7F0] dark:bg-slate-900  pt-20">
       <div className="grid grid-cols-1 lg:grid-cols-[75%_25%]  font-askilon">
         <div className=" p-10 md:p-16 ">
           <h1 className="text-6xl text-[#775f46] dark:text-[#D7D3BF] font-extrabold ">

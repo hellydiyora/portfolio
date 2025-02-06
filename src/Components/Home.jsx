@@ -11,7 +11,7 @@ const Home = () => {
   const { name, description } = home;
 
   return (
-    <div className="pt-20 grid grid-cols-1 md:grid-cols-2  bg-[#ECEBDE] dark:bg-slate-900 justify-self-center self-center">
+    <div className="pt-32 grid grid-cols-1 md:grid-cols-2  bg-[#FAF7F0] dark:bg-slate-900 justify-self-center self-center">
       {/* <div
         className="bg-cover bg-center h-lvh"
         style={{
@@ -19,14 +19,14 @@ const Home = () => {
         }}
       > */}
       <div className="flex justify-center items-center pt-10 md:pt-0  ">
-        <div className="flex justify-center items-center flex-col gap-2 ">
-          <h1 className=" text-[#1A120B] dark:text-white font-askilon text-3xl md:text-4xl lg:text-5xl text-center  font-semibold">
+        <div className="flex justify-center items-center flex-col gap-3 ">
+          <h1 className=" text-[#634e3b] dark:text-white font-askilon text-3xl md:text-4xl lg:text-5xl text-center  font-semibold">
             Hey, I am <span className="font-bold text-5xl md:text-6xl lg:text-7xl ">{name}</span>.
           </h1>
           <p className="px-10 md:px-32 text-xl md:text-xl text-[#6C4E31] dark:text-[#D6CFB4]  text-center font-serif ">
             {description}
           </p>
-          <Link to="/about" >
+          <Link to="/about" className="pt-6" >
             <button className=" bg-[#A59D84] text-lg font-semibold dark:bg-[#c2c5b9] text-[#1A120B] dark:text-black p-2 px-4 rounded-md cursor-pointer hover:bg-[#C1BAA1] hover:shadow-lg shadow-[#484846] shadow-md dark:shadow-neutral-700 dark:hover:shadow-lg dark:hover:bg-[#d9dccf] transition ">
               About me
             </button>
