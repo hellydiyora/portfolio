@@ -11,14 +11,14 @@ const Home = () => {
   const { name, description } = home;
 
   return (
-    <div className="pt-20 grid grid-cols-1 md:grid-cols-2 h-lvh bg-[#ECEBDE] dark:bg-slate-900  justify-self-center self-center">
+    <div className="pt-20 grid grid-cols-1 md:grid-cols-2  bg-[#ECEBDE] dark:bg-slate-900 justify-self-center self-center">
       {/* <div
         className="bg-cover bg-center h-lvh"
         style={{
           backgroundImage: `url(${theme === "dark" ? bgDarkImage : bgImage})`,
         }}
       > */}
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center pt-10 md:pt-0  ">
         <div className="flex justify-center items-center flex-col gap-2 ">
           <h1 className=" text-[#1A120B] dark:text-white font-askilon text-3xl md:text-4xl lg:text-5xl text-center  font-semibold">
             Hey, I am <span className="font-bold text-5xl md:text-6xl lg:text-7xl ">{name}</span>.
@@ -33,7 +33,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden xs:flex justify-center items-center  ">
+      <div className="flex justify-center items-center pt-10 md:pt-0  ">
       <img src={heroImg} alt="img" className=" bg-transparent lg:h-[400px] lg:w-[600px] cust:h-[350px] cust:w-[550px] md:h-[400px] w-650px]" />
       </div>
     </div>
