@@ -9,7 +9,7 @@ import Projects from "./Components/Projects";
 
 const RouteData = () => {
   return (
-    <div className="h-lvh bg-[#E1D7B7] dark:bg-slate-900 ">
+    <div className="h-lvh bg-[#ECEBDE] dark:bg-slate-900 ">
       <BrowserRouter basename="/portfolio">
         <Navbar />
         <Routes>

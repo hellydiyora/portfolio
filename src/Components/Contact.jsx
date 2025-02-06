@@ -55,17 +55,17 @@ const Contact = () => {
   };
 
   return (
-    <div className="bg-[#E1D7B7] dark:bg-slate-900 pt-20 relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center font-askilon">
+    <div className="bg-[#ECEBDE] dark:bg-slate-900  pt-20 relative grid grid-cols-1 lg:grid-cols-2 justify-items-center items-center font-askilon">
       {alertMessage && (
         <div className="absolute top-16 left-10  z-70 bg-white border-1 text-black  p-3 rounded-lg shadow-md text-lg uppercase">
           {alertMessage}
         </div>
       )}
       <div className="pt-10 lg:pt-0 px-10 ">
-        <h1 className="text-6xl  text-[#4B5945] dark:text-[#D7D3BF] font-bold text-left">
+        <h1 className="text-6xl  text-[#775f46] dark:text-[#D7D3BF] font-bold text-left">
           Contact
         </h1>
-        <p className="text-2xl font-semibold text-[#183D3D] dark:text-neutral-500 py-5">
+        <p className="text-2xl font-semibold text-[#3C2A21] dark:text-neutral-500 py-5">
           <span className="font-light font-serif">
             Get in touch with me via social media or send me an email.
           </span>
@@ -99,13 +99,13 @@ const Contact = () => {
           onSubmit={sendEmail}
           className="bg-white dark:bg-[#2d3e5e] p-6 m-6 shadow-neutral-500 dark:shadow-neutral-700 shadow-md rounded-lg space-y-4  place-items-center"
         >
-          <h1 className="text-4xl lg:text-5xl  text-[#4B5945] dark:text-white font-bold text-center p-2 lg:p-4">
+          <h1 className="text-4xl lg:text-5xl  text-[#54473F] dark:text-white font-bold text-center p-2 lg:p-4">
             Send me an email
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full ">
             <div className="grid grid-rows-2 gap-2 ">
               <div>
-                <label className="block text-[#4B5945] dark:text-gray-100">
+                <label className="block text-[#3C2A21] dark:text-gray-100">
                   Name<span className="text-red-500">*</span>
                 </label>
                 <input
@@ -117,7 +117,7 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label className="block text-gray-700 dark:text-gray-100">
+                <label className="block text-[#3C2A21] dark:text-gray-100">
                   Email<span className="text-red-500">*</span>
                 </label>
                 <input
@@ -130,7 +130,7 @@ const Contact = () => {
               </div>
             </div>
             <div>
-              <label className="block text-gray-700 dark:text-gray-100">
+              <label className="block text-[#3C2A21] dark:text-gray-100">
                 Message<span className="text-red-500">*</span>
               </label>
               <textarea
@@ -145,7 +145,7 @@ const Contact = () => {
           <input
             type="submit"
             value="Send email"
-            className=" bg-[#233a30]  dark:bg-[#f7faed] text-orange-200 dark:text-black p-2 px-4 rounded-md cursor-pointer hover:bg-[#183D3D] hover:shadow-lg shadow-[#484846] shadow-md dark:shadow-slate-400 dark:hover:shadow-lg dark:hover:bg-[#eaede0] transition "
+            className=" bg-[#A59D84] text-lg font-semibold dark:bg-[#c2c5b9] text-[#1A120B] dark:text-black p-2 px-4 rounded-md cursor-pointer hover:bg-[#C1BAA1] hover:shadow-lg shadow-[#484846] shadow-md dark:shadow-neutral-700 dark:hover:shadow-lg dark:hover:bg-[#d9dccf] transition"
           />
           {errorMessages && (
             <div className=" text-red-700 bg-red-100 px-3 py-2 rounded-md text-[15px] font-light uppercase">
